@@ -1,11 +1,11 @@
 # task-for-channelpro
 
-First thing to do is to import database.<br />
+<b>First thing to do is to import database.</b><br />
 using phpMyadmin create new database with name users_portal<br />
 and import the file users_portal.sql<br />
 this file exist on the users_portal folder.<br />
 <br />
-A- inside the folder "tasks" you will find the code related to the "Common Task" from the email.<br />
+<b>A- inside the folder "tasks" you will find the code related to the "Common Task" from the email.</b><br />
 
 .        Set up a NodeJS Express server and connect it to MySQL OR a PHP (no framework allowed) server  and connect it to MySQL
 ·        Create a database with a simple users table (First Name, Last Name, Email, Password, Role: [“admin”,“client”])
@@ -23,7 +23,7 @@ Key: Authorization<br />
 Value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MTIsImlhdCI6MTY0MTkzOTQ5NywiZXhwIjoxNjQxOTQzMDk3fQ.6n5mBhQUsQqfZIkr3RUypISWEl87hWsxoalwwE0tYk8
 <br />
 
-B- <b>PHP Task:</b><br />
+<b>B- PHP Task:</b><br />
 use the second folder "users_portal" <br />
 you need to have wampserver to run the application<br />
 copy this folder and paste it on the www folder <br />
