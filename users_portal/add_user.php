@@ -43,7 +43,18 @@ if(isset($_SESSION["error_message"])){ ?>
   <label for="mobile" class="form-label">Mobile <em>*</em></label>
   <input type="text" id="mobile" name="mobile" class="form-control" id="" placeholder="Mobile">
 </div>
-
+<div class="mb-3">
+  <label for="password" class="form-label">Password <em>*</em></label>
+  <input type="password" id="password" name="password" class="form-control" id="" placeholder="Password">
+</div>
+<div class="mb-3">
+<label for="role" class="form-label">Role <em>*</em></label>
+<select class="form-select" name="role" id="role">
+  <option selected value="">- select option -</option>
+  <option value="admin">Admin</option>
+  <option value="client">Client</option>
+</select>
+</div>
 <div class="mb-3">
 <label for="status" class="form-label">Status <em>*</em></label>
 <select class="form-select" name="status" id="status">

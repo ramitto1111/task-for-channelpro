@@ -47,6 +47,19 @@ if(isset($_SESSION["error_message"])){ ?>
 </div>
 
 <div class="mb-3">
+  <label for="password" class="form-label">Password <small class="text-info">( Password will not changed if this field is empty)</small></label>
+  <input type="password" id="password" name="password" class="form-control" id="" placeholder="Password">
+</div>
+
+<div class="mb-3">
+<label for="role" class="form-label">Role <em>*</em></label>
+<select class="form-select" name="role" id="role">
+  <option selected value="">- select option -</option>
+  <option value="admin" <?php if($user["role"] == "admin") echo 'selected="selected"'; ?>>Admin</option>
+  <option value="client" <?php if($user["role"] == "client") echo 'selected="selected"'; ?>>Client</option>
+</select>
+</div>
+<div class="mb-3">
 <label for="status" class="form-label">Status <em>*</em></label>
 <select class="form-select" name="status" id="status">
   <option selected value="">- select option -</option>

@@ -13,12 +13,12 @@ session_start();
 
 $action = $_GET["action"];
 if($action == "add" ){
-if(empty($_POST["first_name"]) || empty($_POST["last_name"]) || empty($_POST["email"]) || empty($_POST["mobile"]) || $_POST["status"] == ""){
+if(empty($_POST["first_name"]) || empty($_POST["password"]) || empty($_POST["last_name"]) || empty($_POST["email"]) || empty($_POST["mobile"]) || $_POST["status"] == ""){
 	$_SESSION["error_message"] = "Fill All Required Fields!";
 	header('Location: add_user.php');
 } else { 
-$sql = "INSERT INTO users (first_name, last_name, email, mobile, status, role, created_on)
-VALUES ('".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["email"]."', '".$_POST["mobile"]."', '".$_POST["status"]."', 'client', '".date('Y-m-d H:i:s')."')";
+$sql = "INSERT INTO users (first_name, last_name, email, mobile, password2, status, role, created_on)
+VALUES ('".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["email"]."', '".$_POST["mobile"]."', '".md5($_POST["password"])."', '".$_POST["status"]."', '".$_POST["role"]."', '".date('Y-m-d H:i:s')."')";
 
 if ($conn->query($sql) === TRUE) {
   $_SESSION["success_message"] = "New record created successfully";
@@ -43,7 +43,10 @@ if(empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["mobile"]) ||
 	$_SESSION["error_message"] = "Fill All Required Fields!";
 	header('Location: edit_user.php?id='.$id);
 } else { 
-$sql = "UPDATE users SET first_name = '".$_POST["name"]."', last_name = '".$_POST["last_name"]."', email = '".$_POST["email"]."', mobile = '".$_POST["mobile"]."', status = '".$_POST["status"]."' WHERE id_users = ".$id;
+$sql = "UPDATE users SET first_name = '".$_POST["name"]."', last_name = '".$_POST["last_name"]."', email = '".$_POST["email"]."', mobile = '".$_POST["mobile"]."', ";
+if(!empty($_POST["password"]))
+$sql .= "password2 = '".md5($_POST["password"])."',"; 
+$sql .= "status = '".$_POST["status"]."', role = '".$_POST["role"]."' WHERE id_users = ".$id;
 
 if ($conn->query($sql) === TRUE) {
   $_SESSION["success_message"] = "New record updated successfully";
