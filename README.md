@@ -7,7 +7,7 @@ this file exist on the users_portal folder.
 
 A- inside the folder "tasks" you will find the code related to the "Common Task" from the email.
 
-.         Set up a NodeJS Express server and connect it to MySQL OR a PHP (no framework allowed) server  and connect it to MySQL
+.        Set up a NodeJS Express server and connect it to MySQL OR a PHP (no framework allowed) server  and connect it to MySQL
 ·        Create a database with a simple users table (First Name, Last Name, Email, Password, Role: [“admin”,“client”])
 ·        Add JWT Authentication
 ·        Create Restful APIs to: Login / Sign UP, Create User and Edit User details
@@ -24,21 +24,21 @@ Value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VycyI6MTIsImlhdCI6M
 
 
 B- PHP Task:
-use the second folder "users_portal" 
-you need to have wampserver to run the application
-copy this folder and paste it on the www folder 
-run it throught the browser as: localhost/users_portal
-Note: I used to work on codeigniter or larave frameworks but because the product used a native PHP code I chose to make this task using the native PHP code.
-you will get a login page first:
-use this credentials:
-Email: ramimiari1985@gmail.com
-Password: 123456
-
-After login you will see the users list 
-you can Add, edit or delet any users if you are with Admin role 
-and if you are not you will can only view the users list.
-
-and you can logout from the top and login with your new user that you will create.
+use the second folder "users_portal" <br />
+you need to have wampserver to run the application<br />
+copy this folder and paste it on the www folder <br />
+run it throught the browser as: localhost/users_portal<br />
+Note: I used to work on codeigniter or larave frameworks but because the product used a native PHP code I chose to make this task using the native PHP code.<br />
+you will get a login page first:<br />
+use this credentials:<br />
+Email: ramimiari1985@gmail.com<br />
+Password: 123456<br />
+<br />
+After login you will see the users list <br />
+you can Add, edit or delet any users if you are with Admin role <br />
+and if you are not you will can only view the users list.<br />
+<br />
+and you can logout from the top and login with your new user that you will create.<br />
 
 
 
